@@ -1,14 +1,31 @@
 import React from "react";
 import "./App.css";
 import GetPhoto from './components/GetPhoto.js';
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  background: blue;
+  border: 5px solid red;
+  border-radius: 50px;
+  padding: 2%;
+  color: white;
+  width: 75%;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+`;
+
 
 function App() {
   return (
     <div className="App">
-      <div className='title'>
-        <h1>NASA PHOTO OF THE DAY</h1>
+      <Wrapper>
+        <Title>NASA PHOTO OF THE DAY</Title>
         <GetPhoto />
-      </div>
+      </Wrapper>
     </div>
   );
 }
